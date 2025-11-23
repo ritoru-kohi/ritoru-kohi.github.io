@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #9bf8ff 60%, #e9ba3b 40%);
+    height: 100vh;
+}
+
+/* Солнце */
+.sun {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #fffadc;
+    border-radius: 50%;
+    top: 50px;
+    right: 50px;
+}
+
+/* Контейнер для трактора с анимацией движения */
+.tractor-container {
+    position: absolute;
+    bottom: 300px;
+    left: -200px;
+    animation: move-tractor 5s ease-in-out forwards;
+}
+
+/* Основной блок трактора */
+.tractor {
+    position: relative;
+    width: 200px;
+    height: 100px;
+}
+
+/* Кабина трактора - простой квадрат */
+.cab {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #1e469e;
+    top: 15px;
+    right: 25px;
+    border-radius: 5px;
+}
+
+/* Основной корпус трактора - прямоугольник */
+.body {
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    background: #1e469e;
+    bottom: 30px;
+    left: 5px;
+    border-radius: 5px;
+}
+
+/* пумпумупууум */
+.block {
+    position: absolute;
+    width: 120px;
+    height: 90px;
+    background: #3165d4;
+    bottom: 70px;
+    left: 5px;
+    border-radius: 5px;
+}
+
+/* Окно трактора */
+.window {
+    position: absolute;
+    width: 50px;
+    height: 45px;
+    background: #cbeaf7;
+    top: 10px;
+    left: 60px;
+    right: 10px;
+    border-radius: 5px;
+}
+
+/* Труба */
+.exhaust {
+    position: absolute;
+    width: 10px;
+    height: 40px;
+    background: #666;
+    top: -18px;
+    right: 15px;
+}
+
+/* Колеса - круги */
+.wheel {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background: #333;
+    border-radius: 50%;
+    border: 5px solid #666;
+    bottom: 0;
+}
+
+/* Центр колеса - маленький круг */
+.wheel::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #888;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Заднее колесо */
+.rear-wheel {
+    left: -20px;
+    width: 90px;
+    height: 90px;
+}
+
+/* Переднее колесо */
+.front-wheel {
+    right: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+/* Анимация движения трактора */
+@keyframes move-tractor {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: calc(100% - 250px);
+    }
+}
